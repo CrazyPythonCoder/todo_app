@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1d%bv0=xmm9abk3udlu_m313t!kqwtdylrpnh&lwwr6wa2^)cg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True # turn to false when deploying
 
 ALLOWED_HOSTS = ['todo-app-mine.herokuapp.com', '127.0.0.1']
 
@@ -124,6 +124,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = [BASE_DIR / 'media']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -15,7 +15,12 @@
 <body>
     {% block content %}
 
-    <img src="{% static 'img/logo.ico' %}" alt="Image">
+    {% for task in tasks %}
+        <h2>Hello {{task.todo_setter.name}}, Here are your tasks</h2>
+
+        <span>{{task.todo}}</span>
+
+    {% endfor %}
     {% endblock %}
 </body>
 </html>
