@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'main.html' %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -7,20 +7,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="SHORTCUT ICON" type="image/x-icon" href=""> -->
     {% block title %}
-    Home
+        Home
     {% endblock %}
 </head>
 <body>
     {% block content %}
 
-    {% for task in tasks %}
-        <h2>Hello {{task.todo_setter.name}}, Here are your tasks</h2>
+    <div class="home-container">
+        {% for task in tasks %}
+            <h2>Hello {{task.todo_setter.name}}, Here are your tasks</h2>
+            <br>
+            <span>{{task.todo}}</span>
+        {% endfor %}
+    </div>
 
-        <span>{{task.todo}}</span>
-
-    {% endfor %}
-    {% endblock %}
+        {% endblock %}
 </body>
 </html>
