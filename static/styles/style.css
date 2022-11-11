@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body {
+    /* background-image: linear-gradient(); */
+    background: linear-gradient(90deg, #e66465, #9198e5);
+}
+
+/* Box */
+.home-container {
+    width: 60%; /* Make the box responsive */
+    /* height: 700px; */
+    height: 50%;
+    border: 4px solid white;
+    border-radius: 25px;
+    margin: auto;
+    text-align: center;
+    font-family: "Ubuntu";
+}
+
+.submit-form-button {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    color: whitesmoke;
+    background-color: darkslategray;
+}
+
+.all-task {
+    width: 90%;
+    height: 50px;
+    border: 2px #01FFA3 solid;
+    border-radius: 3px;
+    margin: auto; /* y and x */
+    margin-bottom: 25px;
+    padding: 50px;
+    text-align: left;
+    border-color: linear-gradient(white, cyan);
+}
+
+.edit-button {
+    align-self: right;
+    margin-left: 60%;
+    margin-bottom: 100px;
+}
+
+.task-name {
+    align-content: left;
+}

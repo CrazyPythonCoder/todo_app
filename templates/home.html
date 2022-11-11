@@ -15,11 +15,26 @@
     {% block content %}
 
     <div class="home-container">
+
+        <h2>Hello {{ task.user.name }}, Here are your tasks</h2>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="main">{{ form.as_p }}</div>
+            <input type="submit" value="Submit" class="submit-form-button">
+        </form>
+
+        
         {% for task in tasks %}
-            <h2>Hello {{task.todo_setter.name}}, Here are your tasks</h2>
-            <br>
-            <span>{{task.todo}}</span>
+            <div class="all-task">
+                <br>
+                <br>
+                <span class="task-name">{{ task.task_name }}</span>
+                <input type="button" value="Edit" class="edit-button">
+                <input type="button" value="Delete" class="delete-button">
+            </div>
         {% endfor %}
+
     </div>
 
         {% endblock %}
